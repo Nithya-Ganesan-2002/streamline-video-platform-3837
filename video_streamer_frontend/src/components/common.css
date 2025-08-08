@@ -1,0 +1,49 @@
+:root {
+  /* Color Tokens */
+  --color-youtube-red: #ff0000;
+  --color-youtube-gray: #909090;
+  --color-youtube-border: #e5e5e5;
+  --color-youtube-gray2: #e7e7e7;
+  --color-youtube-main-text-color: #030303;
+  --color-youtube-gray3: #c4c4c4;
+  --color-youtube-line: #cccccc;
+  --color-white: #ffffff;
+  --color-f9f9f9: #f9f9f9;
+  --color-black: #000000;
+  --color-606060: #606060;
+  --color-e5e5e5: #e5e5e5;
+  --color-c4c4c4: #c4c4c4;
+  --color-e7e7e7: #e7e7e7;
+  --color-f4f4f4: #f4f4f4;
+  --color-282828: #282828;
+  --color-ccccc: #cccccc;
+  --color-56ccf2: #56ccf2;
+
+  /* Typography Tokens */
+  --font-sf-ui: 'SF UI Display', sans-serif;
+  --font-roboto: 'Roboto', Arial, sans-serif;
+
+  /* Typical typography scale for referenced styles */
+  --typo-8-size: 180px;      /* 'Youtube' main heading */
+  --typo-8-weight: 700;
+  --typo-8-line-height: 162px;
+  --typo-8-align: center;
+  --typo-8-letter-spacing: -3.6px;
+  --typo-8-color: var(--color-white);
+
+  --typo-9-size: 38px;       /* 'Home Page' in the button */
+  --typo-9-weight: 700;
+  --typo-9-line-height: 34.2px;
+  --typo-9-align: center;
+  --typo-9-letter-spacing: 0px;
+  --typo-9-color: var(--color-white);
+
+  /* Spacing and Border Radius */
+  --radius-20: 20px;
+  --radius-10: 10px;
+  --radius-5: 5px;
+  --radius-1: 1px;
+
+  /* Shadows */
+  --shadow-0: 0px 30px 30px 0px #000000;
+}

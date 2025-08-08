@@ -1,0 +1,190 @@
+@import url("./common.css");
+
+/* --- NAVBAR ROOT --- */
+.navbar-root {
+  width: 390px;
+  height: 289px;
+  background: var(--color-56ccf2, #2d2dff);
+  border-radius: var(--radius-10, 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- LOGO --- */
+.navbar-logo {
+  width: 80px;
+  height: 24px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-logo-svg {
+  width: 80px;
+  height: 24px;
+  background: var(--color-youtube-red, #ff1744);
+  border-radius: var(--radius-5, 5px);
+  display: inline-block;
+}
+
+/* --- NAVBAR BLOCK (Default, Pressed) --- */
+.navbar-block {
+  width: 302px;
+  height: 74px;
+  margin: 24px 0 12px 0;
+  background: var(--color-white, #fff);
+  border-radius: var(--radius-5, 5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.navbar-block-pressed { margin: 0 0 0 0; }
+
+/* --- ICONS WRAPPER --- */
+.navbar-icons-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+}
+
+/* --- ICON BUTTONS --- */
+.navbar-icon {
+  background: none;
+  border: none;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border-radius: var(--radius-10, 10px);
+  transition: background 0.18s;
+}
+.navbar-icon:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-youtube-red, #ff1744) inset;
+}
+.navbar-icon.pressed {
+  width: 40px;
+  height: 40px;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  padding: 0;
+}
+.navbar-icon .icon-bg {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  border-radius: 50%;
+  background: var(--color-e7e7e7, #e7e7e7);
+  z-index: 0;
+  width: 40px;
+  height: 40px;
+}
+.navbar-icon.pressed > .icon-hamburger,
+.navbar-icon.pressed > .icon-create,
+.navbar-icon.pressed > .icon-chocolate,
+.navbar-icon.pressed > .icon-notification {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+/* --- ICON CLASSES (COLOR/STYLE TOKENS AS PLACEHOLDERS) --- */
+.icon-hamburger,
+.icon-create,
+.icon-chocolate,
+.icon-notification,
+.icon-profile {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: var(--color-c4c4c4, #c4c4c4);
+  border-radius: 6px;
+  position: relative;
+}
+
+.icon-hamburger {
+  background: linear-gradient(
+    to bottom,
+    var(--color-606060, #606060) 25%,
+    var(--color-c4c4c4, #c4c4c4) 25% 50%,
+    var(--color-606060, #606060) 50% 75%,
+    var(--color-c4c4c4, #c4c4c4) 75% 100%
+  );
+}
+.icon-create {
+  background: linear-gradient(
+    135deg,
+    var(--color-youtube-red, #ff1744) 0 60%,
+    var(--color-c4c4c4, #c4c4c4) 60%
+  );
+}
+.icon-chocolate {
+  background: radial-gradient(circle at 70% 40%, var(--color-282828, #212121) 60%, var(--color-c4c4c4, #c4c4c4) 100%);
+}
+.icon-notification {
+  background: linear-gradient(to top, var(--color-e5e5e5, #e5e5e5) 0 50%, var(--color-606060, #606060) 50% 100%);
+}
+.icon-profile {
+  background: var(--color-c4c4c4, #c4c4c4);
+  border-radius: 50%;
+  width: 24px; height: 24px;
+}
+
+/* --- NOTIFICATION BADGE --- */
+.navbar-icon.notification-value {
+  position: relative;
+}
+.notification-badge {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  background: var(--color-ff0000, #ff1744);
+  color: var(--color-white, #fff);
+  font-family: var(--font-roboto, Arial, sans-serif);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 4px;
+  height: 16px;
+  min-width: 16px;
+  line-height: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* --- PRESSED BLOCK (Icon background) --- */
+.navbar-block-pressed .navbar-icon.pressed .icon-bg {
+  background: var(--color-e7e7e7, #e7e7e7);
+}
+
+/* --- Responsive (mobile) --- */
+@media (max-width: 500px) {
+  .navbar-root {
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+  }
+}
