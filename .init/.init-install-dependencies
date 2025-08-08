@@ -1,0 +1,4 @@
+{
+    "command": "npm install",
+    "working_directory": "/home/kavia/workspace/code-generation/streamline-video-platform-3837/video_streamer_frontend"
+}
